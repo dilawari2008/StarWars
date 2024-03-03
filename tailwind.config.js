@@ -7,10 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      animation: {
+        text: "text 5s ease infinite",
+      },
+      fontFamily: {
+        body: ['Nunito'],
+        extra: ['Montserrat'],
+        heading: ['Poppins']
       },
     },
   },
