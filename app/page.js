@@ -1,24 +1,28 @@
 "use client";
 
+import { useEffect } from "react";
 import Image from "next/image";
 import bgImage from "../public/assets/bgImage.jpg";
 import RightArrow from "@/public/assets/RightArrow";
-// import Video from "./bgVideo.mp4";
+import Link from "next/link";
+// import Video from "../public/assets/star-wars.webm";
 
 export default function Home() {
+  useEffect(() => {
+    console.log("Came here");
+  }, []);
   return (
     <div className="h-[100vh] bg-black flex relative justify-center items-center overflow-hidden">
-      <Image src={bgImage} />
+      {/* <Image src={bgImage} /> */}
 
-      {/* <video
-        // className="custom-css-video"
+      <video
+        className="w-[100vw] object-contain"
         autoPlay
         loop
         muted
-        src={Video}
-        type="video/
-          mp4"
-      /> */}
+        src="https://demo-bucket-11111.s3.ap-south-1.amazonaws.com/pexels_videos_3867+(1080p).mp4"
+        type="video/mp4"
+      />
 
       <div className="bg-transparent absolute justify-center items-center flex flex-col gap-2">
         <h2 className="text-white text-5xl font-semibold font-heading">
@@ -35,8 +39,10 @@ export default function Home() {
           residents, and appearances in the films.
         </div>
         <div>
-          <button className="text-white mt-10 text-2xl bg-gray-800 rounded-full py-4 px-6 hover:bg-gray-400 flex justify-center items-center hover:scale-110 font-body">
+          <button className="pill text-white mt-10 text-2xl bg-pink-900 opacity-70 rounded-full py-4 px-6 hover:bg-transparent flex justify-center items-center hover:scale-110 font-body">
+            <Link href="/planets">
             <span>Start Your Journey</span>
+            </Link>
             <div className="mx-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
