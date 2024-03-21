@@ -195,7 +195,7 @@ const PlanetDetails = () => {
 
   return (
     <div className="flex flex-col  items-center justify-center text-white w-full h-full">
-      <h2 className="text-white text-3xl font-semibold font-heading">
+      <h2 className="text-white text-3xl font-semibold font-heading text-center">
         Unveiling the Wonders: A Guide to Star Wars{" "}
         <span className="bg-gradient-to-t bg-clip-text  text-transparent from-red-500 via-orange-500 to-gray-50 animate-text">
           Planets
