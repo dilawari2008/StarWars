@@ -5,7 +5,7 @@ const NavBar = () => {
   return(
     <>
       <nav className="flex justify-left items-center pl-2 pt-2 w-screen">
-        <Image src={StarWarsLogo} width={80} />
+        <Image src={StarWarsLogo} width={80} alt="starwarslogo"/>
       </nav>
     </>
   );

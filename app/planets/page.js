@@ -1,10 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import PlanetGrid from "../components/PlanetGrid";
 
-import LoaderSvg from "../../public/assets/svg-loaders/puff.svg";
-import Image from "next/image";
+import PlanetGrid from "../components/PlanetGrid";
+import Loader from "../components/Loader";
 
 const PlanetDetails = () => {
   const [planets, setPlanets] = useState([]);
@@ -48,7 +47,7 @@ const PlanetDetails = () => {
 
       <div className="w-full h-full">
         {isLoading ? ( // Conditionally render loading indicator
-          <div className="flex h-full w-full items-center justify-center"><Image src={LoaderSvg}/></div>
+          <Loader/>
         ) : (
             <PlanetGrid
               className="flex w-full h-full"
