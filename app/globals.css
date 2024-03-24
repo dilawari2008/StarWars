@@ -6,5 +6,9 @@
 @tailwind utilities;
 
 .pill {
-  @apply  py-2 px-5 rounded-full hover:scale-110 transition ease-out duration-700;
+  @apply  py-2 px-5 rounded-full hover:scale-110 hover:cursor-pointer transition ease-out duration-700;
+}
+
+.pill-disabled {
+  @apply py-2 px-5 rounded-full;
 }
