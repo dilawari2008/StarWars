@@ -2,6 +2,12 @@ Deployed at - https://star-wars-sepia-seven.vercel.app/
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+![Screenshot from 2024-03-24 20-53-14](https://github.com/dilawari2008/StarWars/assets/40742522/26c271a0-9800-4f73-a779-092e0ae7d971)
+
+![Screenshot from 2024-03-24 20-52-30](https://github.com/dilawari2008/StarWars/assets/40742522/14de12ce-89ef-4f2d-9350-c3ed12dddb68)
+
+
+
 ## Getting Started
 
 First, run the development server:
@@ -36,3 +42,5 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
