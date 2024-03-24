@@ -1,20 +1,28 @@
 "use client";
 
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect } from "react";
 import PlanetGrid from "../components/PlanetGrid";
+
+import LoaderSvg from "../../public/assets/svg-loaders/puff.svg";
+import Image from "next/image";
 
 const PlanetDetails = () => {
   const [planets, setPlanets] = useState([]);
   const [nextUrl, setNextUrl] = useState("https://swapi.dev/api/planets");
   const [prevUrl, setPrevUrl] = useState(null);
+  const [isLoading, setIsLoading] = useState(true); // Add state for loading
 
   const fetchPlanets = async (url) => {
+    setIsLoading(true); // Set loading to true before the fetch
+
     const res = await fetch(url);
     const planetList = await res.json();
-    console.log("planetList", planetList);
+
     setPlanets(planetList?.results || []);
     setNextUrl(planetList?.next);
     setPrevUrl(planetList?.previous);
+
+    setIsLoading(false); // Set loading to false after successful fetch
   };
 
   useEffect(() => {
@@ -39,16 +47,18 @@ const PlanetDetails = () => {
       </h2>
 
       <div className="w-full h-full">
-        <Suspense fallback={<div>Loading user profile...</div>}>
-          <PlanetGrid
-            className="flex w-full h-full"
-            planets={planets}
-            nextUrl={nextUrl}
-            prevUrl={prevUrl}
-            onNext={onNext}
-            onPrev={onPrev}
-          />
-        </Suspense>
+        {isLoading ? ( // Conditionally render loading indicator
+          <div className="flex h-full w-full items-center justify-center"><Image src={LoaderSvg}/></div>
+        ) : (
+            <PlanetGrid
+              className="flex w-full h-full"
+              planets={planets}
+              nextUrl={nextUrl}
+              prevUrl={prevUrl}
+              onNext={onNext}
+              onPrev={onPrev}
+            />
+        )}
       </div>
     </div>
   );
