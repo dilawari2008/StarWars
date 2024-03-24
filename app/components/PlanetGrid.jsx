@@ -4,7 +4,7 @@ import PlanetCard from "./PlanetCard";
 const PlanetGrid = ({ planets, nextUrl, prevUrl, onNext, onPrev }) => {
   return (
     <div>
-      <div className="w-full h-full p-2 grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4 p-6">
+      <div className="w-full h-full p-2 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 p-6">
         {planets?.map((planet) => {
           return (
             <div className="col-span-1">
